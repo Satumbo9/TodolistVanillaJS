@@ -8,12 +8,13 @@ body {
   display: flex;
 
   justify-content: center;
-  align-items: center;
+
   height: 100vh;
 }
 
 .form {
   display: flex;
+  margin-top: 10vh;
 }
 
 .form-ctn {
@@ -23,19 +24,51 @@ body {
 
 .input-ctn {
   display: flex;
+  flex-direction: column;
   gap: 10px;
 }
 
 .book-title {
   color: blue;
+  font-size: 1em;
+  cursor: pointer;
+  font-size: 2em;
 }
+
 .delete {
   color: red;
+  cursor: pointer;
+  font-size: 1em;
+  font-size: 2em;
+}
+
+#add {
+  padding: 10px;
+  width: 100px;
+}
+
+#bookname {
+  padding: 10px;
+  width: 300px;
 }
 
 .list-ctn {
   display: flex;
   justify-content: space-between;
+  width: 500px;
   margin-top: 40px;
-  gap: 10px;
+}
+
+.book-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 3em;
+}
+.fields {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
 }

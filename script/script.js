@@ -41,4 +41,14 @@ ul.addEventListener("click", (e) => {
     const li = e.target.parentElement;
     ul.removeChild(li);
   }
+
+  if (e.target.className === "book-title") {
+    if (e.target.style.textDecoration === "line-through") {
+      e.target.style.textDecoration = "none";
+    } else {
+      e.target.style.textDecoration = "line-through";
+    }
+
+    console.log("BookName toggled");
+  }
 });
