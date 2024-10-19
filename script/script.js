@@ -1,5 +1,6 @@
 const addForm = document.forms["bookstoreform"];
-const ul = document.querySelector(".list-of-the-books");
+const ul = document.querySelector("ul");
+const date = new Date();
 
 console.log("Form name is: ", addForm);
 
@@ -12,10 +13,17 @@ addForm.addEventListener("submit", (e) => {
   //   console.log("Input value", value);
 
   if (value !== "") {
+    //Removing classes and Elemets
+    // const emptyTask = document.querySelector(".empty-book-list");
+    // ul.removeChild(emptyTask);
+
     //Creating elements
     const li = document.createElement("li");
     const bookTitle = document.createElement("span");
     bookTitle.textContent = value;
+
+    const datePost = document.createElement("span");
+
     const deleteBtn = document.createElement("span");
     li.classList.add("list-ctn");
 
@@ -48,7 +56,6 @@ ul.addEventListener("click", (e) => {
     } else {
       e.target.style.textDecoration = "line-through";
     }
-
     console.log("BookName toggled");
   }
 });
